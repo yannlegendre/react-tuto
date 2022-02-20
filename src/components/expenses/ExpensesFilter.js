@@ -5,15 +5,10 @@ const ExpensesFilter = (props) => {
     props.onChangeFilter(event.target.value);
   };
 
-  const clearfilter = () => {
-    props.onChangeFilter(-1);
-  };
-
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
         <label>Filter by year</label>
-      <button onClick={clearfilter}>Clear Filter</button>
         <select value={props.selected} onChange={selectHandler}>
           <option value="2022">2022</option>
           <option value="2021">2021</option>
